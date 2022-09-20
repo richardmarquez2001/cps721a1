@@ -13,7 +13,7 @@
 
 %%%%% ATOMIC: authorOf
 % Add the atomic propositions for authorOf in this section
-authorOf(richard, ethan).
+authorOf(ben, ethan).
 
 %%%%%  ATOMIC: publishedBy
 % Add the atomic propositions for publishedBy in this section
