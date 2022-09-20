@@ -1,0 +1,34 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: 
+%%%%% NAME:
+%%%%% NAME:
+%
+% Add your 5 queries below. Ensure that the line before each query describes the query in plain
+% English.For example, if you want to add the query "pred(X, constant).", it should appear as follows:
+% 
+% % Retrieves the block that is on top of blockA
+% QUERY 2: on(X, blockA).
+%
+% where 2 is the number of the query. Omit the "%" on the QUERY line below.
+% Don't forget to end queries with a period.
+
+% Query description
+QUERY 1: .
+
+% Query description
+QUERY 2: .
+
+% Query description
+QUERY 3: .
+
+% Query description
+QUERY 4: .
+
+% Query description
+QUERY 5: .
+
+%%%%% END
+% DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW

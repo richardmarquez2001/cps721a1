@@ -1,0 +1,51 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: 
+%%%%% NAME:
+%%%%% NAME:
+%
+% Add your queries below.For example, if you want to add the query "pred(X, constant).", 
+% it should appear as follows:
+% 
+% % Retrieves the block that is on top of blockA
+% QUERY 2: on(X, blockA).
+%
+% where 2 is the number of the query. Omit the "%" on the QUERY line below.
+% Don't forget to end queries with a period.
+%
+% Each query below is labelled with an English description of what should be queried for.
+
+% Did Chimamanda Ngozi Adichie write "Half of a Yellow Sun"?
+QUERY 1: .
+
+% Who published "Station Eleven"?
+QUERY 2: .
+
+% Did the same author write both "The Apprenticeship of Duddy Kravitz" and "Barney's Version", and if so, who was it?
+QUERY 3: .
+
+% Was there a book published in 2019 that was not published by Random House or Harper Collins? 
+QUERY 4: .
+
+% Did any author write at least two different books, each with a different publisher?
+QUERY 5: .
+
+% Did the author of "A Wild Sheep Chase" write any books before that one?
+QUERY 6: .
+
+% Was there a year from 1977 to 1992 that Stephen King did not publish a book?
+QUERY 7: .
+
+% Was there an author who published a book in 3 consecutive years sometime after 2005 (possibly including 2005)?
+QUERY 8: .
+
+% Did any publisher only publish exactly one book in 1995?
+QUERY 9
+
+% What was the earliest year that Macmillan Publishers published a book in? 
+QUERY 10
+
+%%%%% END
+% DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
