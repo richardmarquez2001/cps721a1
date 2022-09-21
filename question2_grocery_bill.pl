@@ -47,22 +47,23 @@ costAfterTax(Item, AfterTax) :- cost(Item, ItemCost), not taxable(Item), AfterTa
 %%%%% RULE: costAfterTaxAndSale
 % Add the rule(s) for costAfterTaxAndSale in this section
 
-% if item is taxable
+% item has a twoforonesale
 costAfterTaxAndSale(Item, AfterSaleAndTax) :- 
-    cost(Item, PricePerItem), numPurchased(Item, Quantity), 
-    twoForOneSale(Item), taxable(Item), taxRate(TaxRate),
-    AfterSaleAndTax is (((Quantity // 2) + (Quantity mod 2)) * PricePerItem) * (1 + TaxRate).
+    costAfterTax(Item, PriceAfterTax), numPurchased(Item, Quantity), twoForOneSale(Item), 
+    AfterSaleAndTax is PriceAfterTax * ((Quantity // 2) + (Quantity mod 2)).
 
-% if item is not taxable
+% item doesn't have a twoforonesale
 costAfterTaxAndSale(Item, AfterSaleAndTax) :- 
-    cost(Item, PricePerItem), numPurchased(Item, Quantity), 
-    twoForOneSale(Item), not taxable(Item), 
-    AfterSaleAndTax is ((Quantity // 2) + (Quantity mod 2)) * PricePerItem.
+    costAfterTax(Item, PriceAfterTax), numPurchased(Item, Quantity), not twoForOneSale(Item), 
+    AfterSaleAndTax is PriceAfterTax * Quantity.
     
 
 %%%%% RULE: totalCost
 %  Add the rule(s) for totalCost in this section
-totalCost(Cost) :- costAfterTax(Item, AfterTax), Cost is AfterTax. % idk what I'm doing lol
+totalCost(Cost) :- 
+    costAfterTaxAndSale(apple, AppleCost), costAfterTaxAndSale(lettuce, LettuceCost), costAfterTaxAndSale(bread, BreadCost), 
+    costAfterTaxAndSale(chocolate_bar, ChocolateBarCost), costAfterTaxAndSale(ginger_ale, GingerAleCost), 
+    Cost is AppleCost + LettuceCost + BreadCost + ChocolateBarCost + GingerAleCost.
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
