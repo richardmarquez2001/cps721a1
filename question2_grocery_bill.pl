@@ -62,8 +62,7 @@ costAfterTaxAndSale(Item, AfterSaleAndTax) :-
 
 %%%%% RULE: totalCost
 %  Add the rule(s) for totalCost in this section
-
-totalCost(Cost) :- cost(Item, AfterTax). % idk what I'm doing lol
+totalCost(Cost) :- costAfterTax(Item, AfterTax), Cost is AfterTax. % idk what I'm doing lol
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
