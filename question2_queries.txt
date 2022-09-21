@@ -15,19 +15,19 @@
 % where 2 is the number of the query. Omit the "%" on the QUERY line below.
 % Don't forget to end queries with a period.
 
-% Displays the price for the item "chocolate_bar" after tax. Expected value: 
+% Displays the price for the item "chocolate_bar" after tax. Expected value: 6.78
 QUERY 1: costAfterTax(chocolate_bar, AfterTax).
 
-% Displays the price for the item "apple". There should not be tax applied onto this. Expected value: 4
+% Displays the price for the item "apple". There should not be tax applied onto this. Expected value: 8
 QUERY 2: costAfterTax(apple, AfterTax).
 
-% Displays the cost of "bread", which has a two for one sale. Expected value: 
+% Displays the cost of "bread", which has a two for one sale. Expected value: 8
 QUERY 3: costAfterTaxAndSale(bread, AfterSaleAndTax).
 
-% Displays the cost of "ginger_ale", which has both a two for one sale and is taxable. Expected value: 
+% Displays the cost of "ginger_ale", which has both a two for one sale and is taxable. Expected value: 5.65
 QUERY 4: costAfterTaxAndSale(ginger_ale, AfterSaleAndTax).
 
-% Calculates total cost of all items. Expected value: 
+% Calculates total cost of all items. Expected value: 62.43
 QUERY 5: totalCost(Cost).
 
 %%%%% END
