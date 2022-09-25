@@ -2,9 +2,9 @@
 % If you only have 2 group members, leave the last space blank
 %
 %%%%%
-%%%%% NAME: 
-%%%%% NAME:
-%%%%% NAME:
+%%%%% NAME: Richard Marquez
+%%%%% NAME: Benjamin Nguyen
+%%%%% NAME: Ethan Hou
 %
 % Add your 5 queries below. Ensure that the line before each query describes the query in plain
 % English.For example, if you want to add the query "pred(X, constant).", it should appear as follows:
@@ -15,20 +15,20 @@
 % where 2 is the number of the query. Omit the "%" on the QUERY line below.
 % Don't forget to end queries with a period.
 
-% Query description
-QUERY 1: .
+%  A car can go straight on a green light
+QUERY 1: canGo(toyota, south).
 
-% Query description
-QUERY 2: .
+% A car can turn right on a green light
+QUERY 2: canGo(nissan, east).
 
-% Query description
-QUERY 3: .
+% A car cannot go straight on a red light
+QUERY 3: canGo(chevrolet, east).
 
-% Query description
-QUERY 4: .
+% A car cannot turn left when the light is green and there IS a car in the opposite direction
+QUERY 4: canGo(nissan, west).
 
-% Query description
-QUERY 5: .
+% A car can turn left on a yellow light (the KB currently has the lights at green, but will turn yellow in a future timestamp)
+QUERY 5: canGo(toyota, east).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW

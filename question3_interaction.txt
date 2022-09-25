@@ -2,8 +2,20 @@
 % If you only have 2 group members, leave the last space blank
 %
 %%%%%
-%%%%% NAME: 
-%%%%% NAME:
-%%%%% NAME:
+%%%%% NAME: Richard Marquez
+%%%%% NAME: Benjamin Nguyen
+%%%%% NAME: Ethan Hou
 %
 % Add your interaction below
+?- canGo(toyota, south).
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.04s cpu)
+?- canGo(nissan, east).
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.02s cpu)
+?- canGo(chevrolet, east).
+No (0.00s cpu)
+?- canGo(nissan, west).
+No (0.00s cpu)
+?- canGo(toyota, east).
+No (0.00s cpu)
