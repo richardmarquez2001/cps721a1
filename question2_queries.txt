@@ -3,8 +3,8 @@
 %
 %%%%%
 %%%%% NAME: Richard Marquez
-%%%%% NAME:
-%%%%% NAME:
+%%%%% NAME: Benjamin Nguyen
+%%%%% NAME: Ethan Hou
 %
 % Add your 5 queries below. Ensure that the line before each query describes the query in plain
 % English. For example, if you want to add the query "pred(X, constant).", it should appear as follows:

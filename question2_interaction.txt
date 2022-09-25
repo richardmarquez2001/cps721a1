@@ -2,9 +2,9 @@
 % If you only have 2 group members, leave the last space blank
 %
 %%%%%
-%%%%% NAME: 
-%%%%% NAME:
-%%%%% NAME:
+%%%%% NAME: Richard Marquez
+%%%%% NAME: Benjamin Nguyen
+%%%%% NAME: Ethan Hou
 %
 % Add your interaction below
 ?- costAfterTax(chocolate_bar, AfterTax).

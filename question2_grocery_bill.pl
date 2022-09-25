@@ -3,8 +3,8 @@
 %
 %%%%%
 %%%%% NAME: Richard Marquez
-%%%%% NAME:
-%%%%% NAME:
+%%%%% NAME: Benjamin Nguyen
+%%%%% NAME: Ethan Hou
 %
 % Add the required atomic propositions and rules in the corresponding sections. 
 % If you put the propositions and rules in the wrong sections, you may lose marks.
