@@ -2,12 +2,12 @@
 % If you only have 2 group members, leave the last space blank
 %
 %%%%%
-%%%%% NAME: 
+%%%%% NAME: Richard Marquez
 %%%%% NAME:
 %%%%% NAME:
 %
 % Add your 5 queries below. Ensure that the line before each query describes the query in plain
-% English.For example, if you want to add the query "pred(X, constant).", it should appear as follows:
+% English. For example, if you want to add the query "pred(X, constant).", it should appear as follows:
 % 
 % % Retrieves the block that is on top of blockA
 % QUERY 2: on(X, blockA).
@@ -15,20 +15,20 @@
 % where 2 is the number of the query. Omit the "%" on the QUERY line below.
 % Don't forget to end queries with a period.
 
-% Query description
-QUERY 1: .
+% Displays the price for the item "chocolate_bar" after tax. Expected value: 6.78
+QUERY 1: costAfterTax(chocolate_bar, AfterTax).
 
-% Query description
-QUERY 2: .
+% Displays the price for the item "apple". There should not be tax applied onto this. Expected value: 8
+QUERY 2: costAfterTax(apple, AfterTax).
 
-% Query description
-QUERY 3: .
+% Displays the cost of "bread", which has a two for one sale. Expected value: 8
+QUERY 3: costAfterTaxAndSale(bread, AfterSaleAndTax).
 
-% Query description
-QUERY 4: .
+% Displays the cost of "ginger_ale", which has both a two for one sale and is taxable. Expected value: 5.65
+QUERY 4: costAfterTaxAndSale(ginger_ale, AfterSaleAndTax).
 
-% Query description
-QUERY 5: .
+% Calculates total cost of all items. Expected value: 62.43
+QUERY 5: totalCost(Cost).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
