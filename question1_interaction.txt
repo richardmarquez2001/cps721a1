@@ -13,3 +13,35 @@ Yes (0.00s cpu)
 ?- publishedBy(Publisher, station_eleven).
 Publisher = pan_macmillan
 Yes (0.00s cpu)
+?- authorOf(Author, the_apprenticeship_of_duddy_kravitz), authorOf(Author, barneys_version).
+Author = mordecai_richler
+Yes (0.00s cpu)
+?- publicationYear(Book, 2019), not publishedBy(random_house, Book), not publishedBy(harper_collins, Book).
+Book = the_testaments
+Yes (0.00s cpu)
+?- authorOf(Author, Book1), authorOf(Author, Book2), publishedBy(Publisher1, Book1), publishedBy(Publisher2, Book2), not Book1 = Book2, not Publisher1 = Publisher2.
+Author = stephen_king
+Book1 = it
+Book2 = the_stand
+Publisher1 = simon_schuster
+Publisher2 = doubleday
+Yes (0.00s cpu, solution 1, maybe more)
+?- authorOf(Author, a_wild_sheep_chase), publicationYear(a_wild_sheep_chase, Year), authorOf(Author, AnyBook), publicationYear(AnyBook, PreviousYear), PreviousYear < Year.
+Author = haruki_murakami
+Year = 1982
+AnyBook = hear_the_wind_sing
+PreviousYear = 1979
+Yes (0.00s cpu)
+
+
+?- publishedBy(Publisher, Book1), publicationYear(Book1, 1995), not (publishedBy(Publisher, Book2), publicationYear(Book2, 1995), not Book1 = Book2).
+Publisher = reganbooks
+Book1 = wicked
+Book2 = Book2
+Yes (0.00s cpu, solution 1, maybe more)
+?- publishedBy(macmillan_publishers, Book1), publicationYear(Book1, Year1), not (publishedBy(macmillan_publishers, Book2), publicationYear(Book2, Year2), Year2 < Year1).
+Book1 = charles_kingsleys_westward_ho
+Year1 = 1855
+Book2 = Book2
+Year2 = Year2
+Yes (0.00s cpu, solution 1, maybe more)
