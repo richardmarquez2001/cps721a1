@@ -2,8 +2,12 @@
 % If you only have 2 group members, leave the last space blank
 %
 %%%%%
-%%%%% NAME: 
-%%%%% NAME:
-%%%%% NAME:
+%%%%% NAME: Ethan Hou
+%%%%% NAME: Richard Marquez
+%%%%% NAME: Benjamin Nguyen
 %
 % Add your interaction below
+
+?- authorOf(chimamanda_ngozi_adichie, half_of_a_yellow_sun).
+Yes (0.00s cpu)
+

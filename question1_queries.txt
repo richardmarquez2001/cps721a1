@@ -2,9 +2,9 @@
 % If you only have 2 group members, leave the last space blank
 %
 %%%%%
-%%%%% NAME: 
-%%%%% NAME:
-%%%%% NAME:
+%%%%% NAME: Ethan Hou
+%%%%% NAME: Richard Marquez
+%%%%% NAME: Benjamin Nguyen
 %
 % Add your queries below.For example, if you want to add the query "pred(X, constant).", 
 % it should appear as follows:
@@ -33,7 +33,7 @@ QUERY 4: publicationYear(book, 2019), not publishedBy(random_house, year), not p
 QUERY 5: authorOf(author, book1), authorOf(author, book2), publishedBy(publisher1, book1), publishedBy(publisher2, book2), not book1 = book2, not publisher1 = publisher2.
 
 % Did the author of "A Wild Sheep Chase" write any books before that one?
-QUERY 6: authorOf(author, a_wild_sheep_chase), publicationYear(a_wild_sheep_chase, year), authorOf(author, anybook), publicationYear(anyBook, previousYear), previousYear < year.
+QUERY 6: authorOf(author, a_wild_sheep_chase), publicationYear(a_wild_sheep_chase, year), authorOf(author, anybook), publicationYear(anybook, previousyear), previousyear < year.
 
 % Was there a year from 1977 to 1992 that Stephen King did not publish a book?
 QUERY 7: SKIP
