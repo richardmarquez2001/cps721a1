@@ -32,8 +32,15 @@ Year = 1982
 AnyBook = hear_the_wind_sing
 PreviousYear = 1979
 Yes (0.00s cpu)
-
-
+?- authorOf(Author, Book1), publicationYear(Book1, Year), Year >= 2005, authorOf(Author, Book2), Year2 is Year + 1, publicationYear(Book2, Year2), Year3 is Year + 2, publicationYear(Book3, Year3).
+Author = nora_roberts
+Book1 = angels_fall
+Year = 2006
+Book2 = high_noon
+Year2 = 2007
+Year3 = 2008
+Book3 = the_hollow
+Yes (0.00s cpu, solution 1, maybe more)
 ?- publishedBy(Publisher, Book1), publicationYear(Book1, 1995), not (publishedBy(Publisher, Book2), publicationYear(Book2, 1995), not Book1 = Book2).
 Publisher = reganbooks
 Book1 = wicked

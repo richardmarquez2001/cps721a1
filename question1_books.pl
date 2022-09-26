@@ -21,6 +21,8 @@ authorOf(stephen_king, the_stand).
 authorOf(haruki_murakami, a_wild_sheep_chase).
 authorOf(haruki_murakami, hear_the_wind_sing).
 authorOf(nora_roberts, angels_fall).
+authorOf(nora_roberts, high_noon).
+authorOf(nora_roberts, the_hollow).
 
 %%%%%  ATOMIC: publishedBy
 % Add the atomic propositions for publishedBy in this section
@@ -34,7 +36,6 @@ publishedBy(reganbooks, wicked).
 publishedBy(reganbooks, the_truth).
 publishedBy(macmillan_publishers, charles_kingsleys_westward_ho).
 publishedBy(macmillan_publishers, the_jungle_book).
-
 
 %%%%% ATOMIC: publicationYear
 % Add the atomic propositions for publicationYear in this section
