@@ -2,9 +2,9 @@
 % If you only have 2 group members, leave the last space blank
 %
 %%%%%
-%%%%% NAME: 
-%%%%% NAME:
-%%%%% NAME:
+%%%%% NAME: Ethan Hou
+%%%%% NAME: Richard Marquez
+%%%%% NAME: Benjamin Nguyen
 %
 % Add your queries below.For example, if you want to add the query "pred(X, constant).", 
 % it should appear as follows:
@@ -18,34 +18,58 @@
 % Each query below is labelled with an English description of what should be queried for.
 
 % Did Chimamanda Ngozi Adichie write "Half of a Yellow Sun"?
-QUERY 1: .
+QUERY 1: authorOf(chimamanda_ngozi_adichie, half_of_a_yellow_sun).
 
 % Who published "Station Eleven"?
-QUERY 2: .
+QUERY 2: publishedBy(Publisher, station_eleven).
+Publisher = pan_macmillan
 
 % Did the same author write both "The Apprenticeship of Duddy Kravitz" and "Barney's Version", and if so, who was it?
-QUERY 3: .
+QUERY 3: authorOf(Author, the_apprenticeship_of_duddy_kravitz), authorOf(Author, barneys_version).
+Author = mordecai_richler
 
 % Was there a book published in 2019 that was not published by Random House or Harper Collins? 
-QUERY 4: .
+QUERY 4: publicationYear(Book, 2019), not publishedBy(random_house, Book), not publishedBy(harper_collins, Book).
+Book = the_testaments
 
 % Did any author write at least two different books, each with a different publisher?
-QUERY 5: .
+QUERY 5: authorOf(Author, Book1), authorOf(Author, Book2), publishedBy(Publisher1, Book1), publishedBy(Publisher2, Book2), not Book1 = Book2, not Publisher1 = Publisher2.
+Author = stephen_king
+Book1 = it
+Publisher1 = simon_schuster
+Book2 = the_stand
+Publisher2 = doubleday
 
 % Did the author of "A Wild Sheep Chase" write any books before that one?
-QUERY 6: .
+QUERY 6: authorOf(Author, a_wild_sheep_chase), publicationYear(a_wild_sheep_chase, Year), authorOf(Author, AnyBook), publicationYear(AnyBook, PreviousYear), PreviousYear < Year.
+Author = haruki_murakami
+Year = 1982
+AnyBook = hear_the_wind_sing
+PreviousYear = 1979
 
 % Was there a year from 1977 to 1992 that Stephen King did not publish a book?
-QUERY 7: .
+QUERY 7: SKIP
 
-% Was there an author who published a book in 3 consecutive years sometime after 2005 (possibly including 2005)?
-QUERY 8: .
+% Was there an author who published a book in 3 consecutive years sometime after 2005?
+QUERY 8: authorOf(Author, Book1), publicationYear(Book1, Year), publicationYear(Book2, Year+1), publicationYear(Book3, Year+2), not Book1 = Book2, not Book1 = Book3, not Book2 = Book3, Year > 2005.
+Author = nora_roberts
+Book1 = angels_fall
+Year = 2006
+Book2 = high_noon   
+Book3 = the_hollow
 
 % Did any publisher only publish exactly one book in 1995?
-QUERY 9
+QUERY 9: publishedBy(Publisher, Book1), publicationYear(Book1, 1995), not (publishedBy(Publisher, Book2),  publicationYear(Book2, 1995), not Book1 = Book2).
+Publisher = reganbooks
+Book1 = wicked
+Book2 = the_truth   
 
 % What was the earliest year that Macmillan Publishers published a book in? 
-QUERY 10
+QUERY 10: publishedBy(macmillan_publishers, Book1), publicationYear(Book1, Year1), not (publishedBy(macmillan_publishers, Book2), publicationYear(Book2, Year2), Year2 < Year1).
+Book1 = charles_kingsleys_westward_ho
+Year1 = 1855
+Book2 = the_jungle_book
+Year2 = 1894
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
