@@ -18,34 +18,34 @@
 % Each query below is labelled with an English description of what should be queried for.
 
 % Did Chimamanda Ngozi Adichie write "Half of a Yellow Sun"?
-QUERY 1: .
+QUERY 1: authorOf(chimamanda_ngozi_adichie, half_of_a_yellow_sun).
 
 % Who published "Station Eleven"?
-QUERY 2: .
+QUERY 2: publishedBy(publisher, station_eleven).
 
 % Did the same author write both "The Apprenticeship of Duddy Kravitz" and "Barney's Version", and if so, who was it?
-QUERY 3: .
+QUERY 3: authorOf(author, the_apprenticeship_of_duddy_kravitz), authorOf(author, barneys_version).
 
 % Was there a book published in 2019 that was not published by Random House or Harper Collins? 
-QUERY 4: .
+QUERY 4: publicationYear(book, 2019), not publishedBy(random_house, year), not publishedBy(harper_collins, year).
 
 % Did any author write at least two different books, each with a different publisher?
-QUERY 5: .
+QUERY 5: authorOf(author, book1), authorOf(author, book2), publishedBy(publisher1, book1), publishedBy(publisher2, book2), not book1 = book2, not publisher1 = publisher2.
 
 % Did the author of "A Wild Sheep Chase" write any books before that one?
-QUERY 6: .
+QUERY 6: authorOf(author, a_wild_sheep_chase), publicationYear(a_wild_sheep_chase, year), authorOf(author, anybook), publicationYear(anyBook, previousYear), previousYear < year.
 
 % Was there a year from 1977 to 1992 that Stephen King did not publish a book?
-QUERY 7: .
+QUERY 7: SKIP
 
-% Was there an author who published a book in 3 consecutive years sometime after 2005 (possibly including 2005)?
-QUERY 8: .
+% Was there an author who published a book in 3 consecutive years sometime after 2005?
+QUERY 8: authorOf(author, book1), publicationYear(book1, year), publicationYear(book2, year+1), publicationYear(book3, year+2), not book1 = book2, not book1 = book3, not book2 = book3, year > 2005.
 
 % Did any publisher only publish exactly one book in 1995?
-QUERY 9
+QUERY 9: publishedBy(publisher, book1), publicationYear(book1, 1995), not (publishedBy(publisher, book2),  publicationYear(book2, 1995), not book1 = book2).
 
 % What was the earliest year that Macmillan Publishers published a book in? 
-QUERY 10
+QUERY 10: publishedBy(macmillan_publishers, book1), publicationYear(book1, year1), not (publishedBy(macmillan_publishers, book2), publicationYear(book2, year2), year2 < year1).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
