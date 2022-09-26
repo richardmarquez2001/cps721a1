@@ -26,6 +26,8 @@ authorOf(nora_roberts, angels_fall).
 % Add the atomic propositions for publishedBy in this section
 
 publishedBy(pan_macmillan, station_eleven).
+publishedBy(random_house, when_in_rome).
+publishedBy(harper_collins, poster_girl).
 publishedBy(simon_schuster, it).
 publishedBy(doubleday, the_stand).
 publishedBy(reganbooks, wicked).

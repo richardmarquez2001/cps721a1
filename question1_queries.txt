@@ -21,16 +21,24 @@
 QUERY 1: authorOf(chimamanda_ngozi_adichie, half_of_a_yellow_sun).
 
 % Who published "Station Eleven"?
-QUERY 2: publishedBy(publisher, station_eleven).
+QUERY 2: publishedBy(Publisher, station_eleven).
+Publisher = pan_macmillan
 
 % Did the same author write both "The Apprenticeship of Duddy Kravitz" and "Barney's Version", and if so, who was it?
-QUERY 3: authorOf(author, the_apprenticeship_of_duddy_kravitz), authorOf(author, barneys_version).
+QUERY 3: authorOf(Author, the_apprenticeship_of_duddy_kravitz), authorOf(Author, barneys_version).
+Author = mordecai_richler
 
 % Was there a book published in 2019 that was not published by Random House or Harper Collins? 
-QUERY 4: publicationYear(book, 2019), not publishedBy(random_house, year), not publishedBy(harper_collins, year).
+QUERY 4: publicationYear(Book, 2019), not publishedBy(random_house, Book), not publishedBy(harper_collins, Book).
+Book = the_testaments
 
 % Did any author write at least two different books, each with a different publisher?
-QUERY 5: authorOf(author, book1), authorOf(author, book2), publishedBy(publisher1, book1), publishedBy(publisher2, book2), not book1 = book2, not publisher1 = publisher2.
+QUERY 5: authorOf(Author, Book1), authorOf(Author, Book2), publishedBy(Publisher1, Book1), publishedBy(Publisher2, Book2), not Book1 = Book2, not Publisher1 = Publisher2.
+Author = stephen_king
+Book1 = it
+Publisher1 = simon_schuster
+Book2 = the_stand
+Publisher2 = doubleday
 
 % Did the author of "A Wild Sheep Chase" write any books before that one?
 QUERY 6: authorOf(author, a_wild_sheep_chase), publicationYear(a_wild_sheep_chase, year), authorOf(author, anybook), publicationYear(anybook, previousyear), previousyear < year.
